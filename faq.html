@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Časté dotazy (FAQ) - Cubiq</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .faq-item a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .faq-item a:hover {
+            text-decoration: underline;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        footer nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var faqLinks = document.querySelectorAll(".faq-item a");
+            faqLinks.forEach(function(link) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    var targetId = link.getAttribute("href").substring(1);
+                    var answer = document.getElementById(targetId);
+                    answer.classList.toggle("visible");
+                    answer.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Cubiq</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="about.html">O nás</a></li>
+                <li><a href="news.html">Novinky</a></li>
+                <li><a href="support.html">Podpora</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="faq">
+            <h1>Časté dotazy (FAQ)</h1>
+            <div class="faq-item">
+                <h2><a href="#q1">Jaká je velikost instalačního souboru?</a></h2>
+                <p id="q1" class="answer">Velikost instalačního souboru se liší podle platformy, pohybuje se mezi 200 MB a 1 GB.</p>
+            </div>
+            <div class="faq-item">
+                <h2><a href="#q2">Je hra kompatibilní s mým zařízením?</a></h2>
+                <p id="q2" class="answer">Zkontrolujte systémové požadavky uvedené na stránce „download.html“, abyste zjistili, zda je hra kompatibilní s vaším zařízením.</p>
+            </div>
+            <div class="faq-item">
+                <h2><a href="#q3">Jak mohu kontaktovat podporu?</a></h2>
+                <p id="q3" class="answer">Pokud máte jakékoli problémy nebo otázky, kontaktujte nás na emailu: support@cubiqgame.com.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cubiq. Všechna práva vyhrazena.</p>
+        <nav>
+            <a href="terms.html">Podmínky používání</a>
+            <a href="privacy.html">Zásady ochrany osobních údajů</a>
+        </nav>
+    </footer>
+</body>
+</html>
