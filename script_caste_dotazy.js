@@ -5,3 +5,7 @@ faqs.forEach(faq => {
         faq.classList.toggle("active");
     })
 })
+
+function redirect() {
+    window.location.href = "https://github.com/TomasHoncik/VYT_ZAVERECNY_PROJEKT";
+}

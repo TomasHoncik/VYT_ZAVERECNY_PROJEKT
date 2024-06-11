@@ -1,7 +1,8 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(bg_1.jpg);
 }
 
 nav{
@@ -32,4 +33,141 @@ nav a{
 
 nav a:hover{
     background-color: gray;
+}
+
+.section_1{
+    width: 100%;
+    height: 100vh;
+
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+} */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    height: 80px;
+    background-color: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc(100vw - 1300px ) / 2;
+}
+
+nav  a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 0 1.5rem;
+
+}
+
+nav a:hover{
+    color: #fdcc04;
+}
+
+
+.logo{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0 2rem;
+}
+
+.section_1{
+    background-color: #222222;
+}
+.content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc(100vw - 1300px ) / 2;
+}
+
+.column-left{
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: flex-start;
+    color: white;
+    padding: 0rem 2rem;
+}
+
+.column-left h1{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.column-left p{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+button{
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    color: #222222;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50px;
+
+}
+
+button:hover{
+    background-color: #fdcc04;
+    color: white;
+}
+
+.column-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 2rem;
+}
+
+#uvodni_screen{
+    margin-right: 20%;
+    height: 60%;
+    width: 120%;
+}
+
+@media (max-width: 900px) {
+    .content{
+        grid-template-columns: 1fr;
+        margin-left: 15%;
+    }
+
+}
+
+.section_2{
+    color: white;
+    background-color: #222222;
+}
+
+.content_2{
+    margin-left: 30%;
+}
+
+h2{
+   margin-bottom: 3%;
+   margin-left: 12.5%;
 }
